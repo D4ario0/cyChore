@@ -1,5 +1,8 @@
 # cyChore
-This is a python script that aims to ease out the process of assign and notify tasks team members in a weekly basis, serving more like a template rather than a library, specially if the tasks rotate every week. This project was designed to be a small, easy to scale, highly-customizable, out-of-the-box, you name it, solution that requires minimum set-up to start sending notifications and reminders.
+This is a python script that aims to ease out the process of assign and notify tasks team members in a weekly basis, serving more like a template rather than a library, specially if the tasks rotate every week. 
+
+This project was designed to be a small, easy to scale, highly-customizable, out-of-the-box, you name it, solution that requires minimum set-up to start sending notifications and reminders.
+
 Even thought it is a well rounded script it stills need to be run by the user, you my want to consider tools like Windows Task Scheduler, Zapier, webhooks, etc.
 
 # How to use
@@ -27,11 +30,11 @@ The default user type follows these structure:
 ```
 
 # Customization
-As previously mentioned the focus of this project is to serve like a template rather than library, using high-level functions rather than low-level abstractions, in order to start using it out-of-the-box.
-Some improvements and customizations can come in the form of:
-- Different assignment logic
-- Incorporate databases for user information retrieval.
-- Add your custom email templates.
+As previously mentioned the focus of this project is to serve like a template rather than library, using high-level functions rather than low-level abstractions, allowing you to start using it out-of-the-box.
+Some potential improvements and customizations include:
+- Implementing ifferent assignment logic
+- Integrating databases for user information retrieval.
+- Adding custom email templates.
 
 # Default Template
 ![image](https://github.com/AlexGarc-sudo/cyChore/assets/144295305/737d3dcd-f997-4b57-bc99-82a51a595f11)
