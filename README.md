@@ -32,7 +32,7 @@ The default user type follows these structure:
 # Customization
 As previously mentioned the focus of this project is to serve like a template rather than library, using high-level functions rather than low-level abstractions, allowing you to start using it out-of-the-box.
 Some potential improvements and customizations include:
-- Implementing ifferent assignment logic
+- Implementing different assignment logic
 - Integrating databases for user information retrieval.
 - Adding custom email templates.
 
