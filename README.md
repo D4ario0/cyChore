@@ -3,7 +3,7 @@ This is a python script that aims to ease out the process of assign and notify t
 
 This project was designed to be a small, easy to scale, highly-customizable, out-of-the-box, you name it, solution that requires minimum set-up to start sending notifications and reminders.
 
-Even thought it is a well rounded script it stills need to be run by the user, you my want to consider tools like Windows Task Scheduler, Zapier, webhooks, etc.
+Even thought it is a well rounded script it stills need to be run by the user, you may want to consider tools like Windows Task Scheduler, Zapier, webhooks, etc.
 
 # How to use
 1. Clone the repo.
