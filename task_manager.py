@@ -6,18 +6,19 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from configparser import ConfigParser
 from datetime import datetime
+from itertools import cycle
 
 # Buffer of tasks to be assigned on a weekly rotating basis
 warnings.warn(
     "Assign your tasks here. If tasks > 10, consider importing from a file instead.",
     Warning,
 )
-tasks_buffer = [
+tasks_buffer = cycle([
     "Task# 1",
     "Task# 2",
     "Task# 3",
     "Task# 4",
-]
+])
 
 # Set up .log file
 log_format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -64,10 +65,11 @@ def week_calc(today: datetime, start: datetime) -> int:
     return delta_weeks
 
 
-def assign_task(user: str, info: dict, tasks: list[str], weeks: int) -> tuple[str, str]:
+def assign_task(user: str, info: dict, tasks: cycle, weeks: int) -> tuple[str, str]:
     """Assign a task to a user based on the current week."""
-    task_index = (info[user][1] + weeks) % len(tasks)
-    task = tasks[task_index]
+    for _ in range(weeks):
+        next(tasks)
+    task = next(tasks)
     return info[user][0], task
 
 
@@ -80,7 +82,7 @@ def format_email(user: str, task: str, today: datetime) -> str:
     else:
         template = templates["REMINDER"]
 
-    with open(f"{template}.html", "r") as file:
+    with open(template, "r") as file:
         html_content = file.read()
         html_content = html_content.replace("{{name}}", user)
         html_content = html_content.replace("{{task}}", task)
