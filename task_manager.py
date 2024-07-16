@@ -80,7 +80,7 @@ def format_email(user: str, task: str, today: datetime) -> str:
     else:
         template = templates["REMINDER"]
 
-    with open(f"{template}.html", "r") as file:
+    with open(template, "r") as file:
         html_content = file.read()
         html_content = html_content.replace("{{name}}", user)
         html_content = html_content.replace("{{task}}", task)
